@@ -1,0 +1,33 @@
+{
+    "name": "vularsoft/blog",
+    "description": "Post module of Vular",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Water Li",
+            "email": "11011968@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Water\\Vular\\Post\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Water\\Vular\\Post\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Water\\Vular\\Post\\Providers\\PostServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    }
+}
