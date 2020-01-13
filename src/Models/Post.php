@@ -1,9 +1,8 @@
 <?php
 
-namespace Water\Vular\Post\Models;
+namespace Water\Vular\Webadmin\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Water\Vular\Models\SlugFindable;
 
 class Post extends Model{
     use SlugFindable;
@@ -20,15 +19,15 @@ class Post extends Model{
     }
 
     public function attributes(){
-        return $this->belongsToMany('Water\Vular\Post\Models\PostAttribute');
+        return $this->belongsToMany('Water\Vular\Webadmin\Models\PostAttribute');
     }
 
     public function categories(){
-        return $this->belongsToMany('Water\Vular\Post\Models\PostCategory');
+        return $this->belongsToMany('Water\Vular\Webadmin\Models\PostCategory');
     }
 
     public function tags(){
-        return $this->belongsToMany('Water\Vular\Post\Models\PostTag');
+        return $this->belongsToMany('Water\Vular\Webadmin\Models\PostTag');
     }
 
     public function medias(){
@@ -37,15 +36,15 @@ class Post extends Model{
     }
 
     public function seoMeta(){
-        return $this->hasOne('Water\Vular\Models\SeoMeta');
+        return $this->hasOne('Water\Vular\Webadmin\Models\SeoMeta');
     }
 
     public function ogMeta(){
-        return $this->hasOne('Water\Vular\Models\OgMeta');
+        return $this->hasOne('Water\Vular\Webadmin\Models\OgMeta');
     }
 
     public function relatedProducts(){
-        return $this->belongsToMany('Water\Vular\Models\Product');
+        return $this->belongsToMany('Water\Vular\Webadmin\Models\Product');
     }
 
     public function featureMedia(){

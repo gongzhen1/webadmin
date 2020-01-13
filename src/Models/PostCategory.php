@@ -1,9 +1,9 @@
 <?php
 
-namespace Water\Vular\Post\Models;
+namespace Water\Vular\Webadmin\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Water\Vular\Models\SlugFindable;
+use Water\Vular\Webadmin\Models\SlugFindable;
 use Water\Vular\Models\VularTree;
 
 class PostCategory extends Model{
@@ -11,6 +11,6 @@ class PostCategory extends Model{
 
 
     public function posts(){
-        return $this->belongsToMany('Water\Vular\Models\Post');
+        return $this->belongsToMany('Water\Vular\Webadmin\Models\Post');
     }
 }

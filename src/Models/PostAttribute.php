@@ -1,6 +1,6 @@
 <?php
 
-namespace Water\Vular\Post\Models;
+namespace Water\Vular\Webadmin\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

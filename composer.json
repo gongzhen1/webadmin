@@ -1,6 +1,6 @@
 {
-    "name": "vularsoft/blog",
-    "description": "Post module of Vular",
+    "name": "vularsoft/webadmin",
+    "description": "Web Admin Dashboard, use vular",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -12,18 +12,18 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Water\\Vular\\Post\\": "src/"
+            "Water\\Vular\\Webadmin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Water\\Vular\\Post\\Tests\\": "tests/"
+            "Water\\Vular\\Webadmin\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Water\\Vular\\Post\\Providers\\PostServiceProvider"
+                "Water\\Vular\\Webadmin\\WebadminServiceProvider"
             ],
             "aliases": {
                 
