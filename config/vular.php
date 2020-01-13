@@ -1,16 +1,20 @@
 <?php
 
 return [
-    'menus'=>[
-        Water\Vular\Webadmin\Page\Menu::class,
-        Water\Vular\Webadmin\Post\Menu::class,
-        Water\Vular\Webadmin\Product\Menu::class,
-    ],
-
-    'permissions'=>[
-        //Water\Vular\PreMades\Trades\Order\Permission::class,
-        //Water\Vular\PreMades\Trades\Sample\Permission::class,
-        //Water\Vular\PreMades\Trades\Common\Permission::class,
-        //Water\Vular\Admin\User\Permission::class,
-    ],
+    'post-media-size'=>[870,561],
+    'post-media-thumb-size'=>[560,361],
+    'page-media-size'=>[870,561],
+    'page-media-thumb-size'=>[560,361],
+    'product-media-size'=>[780,690],
+    'product-media-thumb-size'=>[260,230],
+    'product-media-small-thumb-size'=>[130,115],
+    'sitename'=>'WebTheme',
+    'contact' => 'Water',
+    'email' => '',
+    'tel' => '',
+    'mob' => '',
+    'address' => "",
+    'linkedin' => "#",
+    'facebook' => "#",
+    'twitter' => "#",
 ];

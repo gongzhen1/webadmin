@@ -243,8 +243,8 @@ class PostEdit extends TwoColumnsFormPage{
                 ->input(
                     VularMediaSelect::make()
                         ->field('medias')
-                        ->addSize(post_media_size())
-                        ->addSize(post_media_thumb_size())
+                        ->addSize(config('vular.post-media-size'))
+                        ->addSize(config('vular.post-media-thumb-size'))
                         ->imageFlexClass('xs6')
                 ),
             VularFormGridCard::make()

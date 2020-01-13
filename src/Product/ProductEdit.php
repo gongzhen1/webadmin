@@ -323,9 +323,9 @@ class ProductEdit extends TwoColumnsFormPage{
                     VularMediaSelect::make()
                         ->field('medias')
                         ->imageFlexClass('xs6')
-                        ->addSize(['780','690'])
-                        ->addSize(['260','230'])
-                        ->addSize(['130','115'])
+                        ->addSize(config('vular.product-media-size'))
+                        ->addSize(config('vular.product-media-thumb-size'))
+                        ->addSize(config('vular.product-media-small-thumb-size'))
                 ),
             VularFormGridCard::make()
                 ->title('相关产品')

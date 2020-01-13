@@ -23,6 +23,9 @@ class WebadminServiceProvider extends VularBaseServiceProvider {
     public function register()
     {
         $this->baseDir = __DIR__ .'/../';
+        $this->mergeConfigFrom(
+            $this->baseDir.'config/vular.php', 'vular'
+        );
         $this->registerMenuItem('Water\Vular\Webadmin\Form\Menu');
         $this->registerMenuItem('Water\Vular\Webadmin\Page\Menu');
         $this->registerMenuItem('Water\Vular\Webadmin\Post\Menu');

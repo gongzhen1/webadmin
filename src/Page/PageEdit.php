@@ -78,8 +78,8 @@ class PageEdit extends OneColumnFormPage{
                 ->flex(
                     VularAvatar::make()
                         ->field('featureImage')
-                        ->addSize(page_media_size())
-                        ->addSize(page_media_thumb_size())
+                        ->addSize(config('vular.page-media-size'))
+                        ->addSize(config('vular.page-media-thumb-size'))
                         ->label('特色图片')
                 )
                 ->flex(
