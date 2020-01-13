@@ -55,7 +55,7 @@ class Post extends Model{
 
     public function featureThumbnail(){
         $media = $this->medias()->first();
-        $size = post_media_thumb_size();
+        $size = config('vular.post_media_thumb_size');
         return $media ? $media->fitName($size) : 'post-blank.jpg';
     }
 
