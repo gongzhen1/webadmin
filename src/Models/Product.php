@@ -41,14 +41,16 @@ class Product extends Model{
 
     public function featureThumbnail(){
         $media = $this->medias()->first();
-        
-        return $media ? $media->fitName([260,230]) : 'blank.jpg';
+         $size = config('vular.product-media-thumb-size');
+       
+        return $media ? $media->fitName($size) : 'blank.jpg';
     }
 
     public function featureSmallThumbnail(){
         $media = $this->medias()->first();
+        $size = config('vular.product-media-small-thumb-size');
         
-        return $media ? $media->fitName([130,115]) : 'blank.jpg';
+        return $media ? $media->fitName($size) : 'blank.jpg';
     }
 
 }
