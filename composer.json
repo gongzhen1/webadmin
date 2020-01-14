@@ -1,6 +1,6 @@
 {
-    "name": "vularsoft/order",
-    "description": "外贸订单管理系统",
+    "name": "vularsoft/webadmin",
+    "description": "Web Admin Dashboard, use vular",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -12,18 +12,18 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Water\\Vular\\Order\\": "src/"
+            "Water\\Vular\\Webadmin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Water\\Vular\\Order\\Tests\\": "tests/"
+            "Water\\Vular\\Webadmin\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Water\\Vular\\Order\\OrderServiceProvider"
+                "Water\\Vular\\Webadmin\\WebadminServiceProvider"
             ],
             "aliases": {
                 
