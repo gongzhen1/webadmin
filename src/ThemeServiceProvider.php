@@ -41,9 +41,11 @@ class ThemeServiceProvider extends ServiceProvider {
         $this->publishes([
             $this->baseDir.'public/uploads' => public_path('uploads'),
         ], 'public');
-        //$this->publishes([
-        //    $this->baseDir.'config/'.$dir.'.php' => config_path($dir.'.php'),
-        //]);
+        if(config('vular.migrations')){
+            $this->publishes([
+                $this->baseDir.'database/migrations/' => database_path('migrations')
+            ], 'migrations');
+        }
        
      }
 
