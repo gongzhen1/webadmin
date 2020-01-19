@@ -55,12 +55,14 @@ class ThemeServiceProvider extends ServiceProvider {
         $this->mergeConfigFrom(
             __DIR__ .'/../'.'config/vular.php', 'vular'
         );
-        $theme = config('vular.theme') ? config('vular.theme') : "Warmy";
-        $this->baseDir = app_path() .'/Themes/'.$theme.'/';
+        if(config('vular.theme')){
+            $theme = config('vular.theme');
+            $this->baseDir = app_path() .'/Themes/'.$theme.'/';
 
-        $this->mergeConfigFrom(
-            $this->baseDir.'config/vular.php', 'vular'
-        );
+            $this->mergeConfigFrom(
+                $this->baseDir.'config/vular.php', 'vular'
+            );
+        }
    }
 
 
