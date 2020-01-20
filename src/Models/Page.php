@@ -37,13 +37,13 @@ class Page extends Model{
 
     public function featureMedia(){
         $media = $this->featureImage;
-        $size = page_media_size();
+        $size = config('vular.page-media-size');
         return $media ? $media->fitName($size) : 'post-blank.jpg';
     }
 
     public function featureThumbnail(){
         $media = $this->featureImage;
-        $size = page_media_thumb_size();
+        $size = config('vular.page-media-thumb-size');
         return $media ? $media->fitName($size) : 'post-blank.jpg';
     }
 
