@@ -62,9 +62,14 @@ class ThemeServiceProvider extends ServiceProvider {
             $this->mergeConfigFrom(
                 $this->baseDir.'config/vular.php', 'vular'
             );
+
+            //直接合并到mail不管用，曲线救国
             $this->mergeConfigFrom(
-                $this->baseDir.'config/mail.php', 'mail'
+                $this->baseDir.'config/mail.php', 'vular'
             );
+
+            config(['mail.from' => config('vular.from')]);
+
         }
    }
 
