@@ -69,6 +69,10 @@ class SeoEdit extends FormDialog{
             VTextArea::make()
                 ->field('description')
                 ->label('Description')
+                ->rows(2),
+            VTextArea::make()
+                ->field('keywords')
+                ->label('Keywords')
                 ->rows(2)
         );
     }
