@@ -46,6 +46,10 @@ class ThemeServiceProvider extends ServiceProvider {
                 $this->baseDir.'database/migrations/' => database_path('migrations')
             ], 'migrations');
         }
+        $migrationsPath = app_path('Themes/'.$dir.'/database/migrations');
+        if(is_dir($migrationsPath)){
+            $this->loadMigrationsFrom($migrationsPath);
+        }
        
      }
 
