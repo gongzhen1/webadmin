@@ -49,7 +49,7 @@ class Post extends Model{
 
     public function featureMedia(){
         $media = $this->medias()->first();
-        $size = config('vular.post-media-thumb-size');
+        $size = config('vular.post-media-size');
         return $media ? $media->fitName($size) : 'post-blank.jpg';
     }
 
