@@ -22,7 +22,7 @@ use Water\Vular\Elements\Vuetify\VMenu;
 use Water\Vular\Elements\Vuetify\VSelect;
 use Water\Vular\Elements\VularAction;
 use Water\Vular\Elements\Vular\VularSlug;
-use Water\Vular\Elements\Vular\VularCodeEditor;
+use Water\Vular\Elements\Vular\VularTiptapEditor;
 use Water\Vular\Webadmin\Base\OgEdit;
 use Water\Vular\Webadmin\Base\SeoEdit;
 use Water\Vular\Webadmin\Models\PageAttribute;
@@ -134,7 +134,7 @@ class PageEdit extends OneColumnFormPage{
                 ->cardTextClass('pa-0')
                 ->title('页面内容')
                 ->flex(
-                    VularCodeEditor::make()
+                    VularTiptapEditor::make()
                         ->field('content'),
                         //->label('标题')
                         //->requried(),
